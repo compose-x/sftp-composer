@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "id": "sftp-composer.spec.json",
+    "$id":"sftp-composer.spec.json",
+    "title": "sftp-composer",
+    "description": "x-cluster specification for ECS Cluster",
+    "type": "object",
+    "properties": {
+        "HomeDirectoryDetails": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/DirectoryMapping"
+            }
+        },
+        "PublicKeys": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Role": {
+            "type": "string"
+        }
+    },
+    "definitions": {
+        "DirectoryMapping": {
+            "type": "object",
+            "properties": {
+                "UserPath": {
+                    "type": "string"
+                },
+                "BucketPath": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+---
+# test file
+
+HomeDirectoryDetails:
+  - UserPath: /somewhere
+    BucketPath: /bucket01
+  - UserPath: /else
+    BucketPath: /bucket02
+
+Role: arn:aws:iam::01234567891:role/test
