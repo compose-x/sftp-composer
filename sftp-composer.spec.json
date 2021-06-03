@@ -19,7 +19,7 @@
             }
         },
         "Role": {
-            "type": "string"
+            "type": ["string", "boolean"]
         }
     },
     "definitions": {

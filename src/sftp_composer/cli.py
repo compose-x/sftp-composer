@@ -8,8 +8,7 @@
 import argparse
 import sys
 
-
-from src.sftp_composer.sftp_composer import render, import_file_content
+from sftp_composer.sftp_composer import import_file_content, render
 
 
 def main():
@@ -19,8 +18,6 @@ def main():
     parser.add_argument("_", nargs="*")
     args = parser.parse_args()
 
-    print("Arguments: " + str(args._))
-    print("Replace this message by putting your code into " "sftp_composer.cli.main")
     content = import_file_content(args.file_path)
     template = render(content)
     print(template.to_json())
